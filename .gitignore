@@ -1,0 +1,37 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directory
+node_modules/
+
+# Production build
+dist/
+build/
+dist-ssr/
+
+# Local env files
+*.local
+.env
+.env.*.local
+
+# Editor directories and OS files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Optional: lockfiles (if not needed in repo)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
