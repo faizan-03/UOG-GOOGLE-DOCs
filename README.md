@@ -1,12 +1,50 @@
-# React + Vite
+# UOGDOCACCESS Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the UOG Document Access system, built with React and Vite. It provides a user-friendly interface for students and administrators to access, verify, and manage university documents securely.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Student document download and verification
+- Admin dashboard for user and document management
+- Secure authentication and verification steps
+- Responsive, modern UI
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js (v16 or above recommended)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/faizan-03/UOG-GOOGLE-DOCs.git
+   cd UOG-GOOGLE-DOCs/frontend/UOGDOCACCESS
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the App
+Start the development server:
+```sh
+npm run dev
+# or
+yarn dev
+```
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+## Project Structure
+
+- `src/` — Main source code
+  - `components/` — Reusable UI components (admin, user)
+  - `pages/` — Main pages (Admin, Userboard, Register, Starter)
+  - `store/` — State management (authstore)
+  - `lib/` — Utility libraries (axios wrapper)
+  - `assets/` — Images and static assets
+- `public/` — Static files
+- `vite.config.js` — Vite configuration
+
