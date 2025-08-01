@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API_URL = 'http://134.209.157.232:8000';
+export const API_URL = 'http://134.209.157.232:8000';
 
 export const registerUser = async ({ email, password, username }) => {
   try {
