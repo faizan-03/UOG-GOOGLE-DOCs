@@ -1,7 +1,8 @@
 import axious from 'axios';
+import { API_URL } from './authstore'; // Adjust the import path as necessary
 
 const instance = axious.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: `${API_URL}/api`,
     withCredentials: true,
 });
 

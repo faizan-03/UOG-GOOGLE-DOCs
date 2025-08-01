@@ -2,9 +2,11 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
+const API_URL = 'http://134.209.157.232:8000';
+
 export const registerUser = async ({ email, password, username }) => {
   try {
-    const res = await axios.post('http://localhost:8000/api/auth/register', {
+    const res = await axios.post(`${API_URL}/api/auth/register`, {
       email,
       password,
       username,
@@ -25,7 +27,7 @@ export const registerUser = async ({ email, password, username }) => {
 export const loginUser = async ({ email, password }) => {
   try {
     const res = await axios.post(
-      'http://localhost:8000/api/auth/login',
+      `${API_URL}/api/auth/login`,
       { email, password },
       { withCredentials: true } // ✅ sends the cookie
     );
@@ -42,7 +44,7 @@ export const loginUser = async ({ email, password }) => {
 // src/store/authStore.js
 export const getCurrentUser = async () => {
   try {
-    const res = await axios.get('http://localhost:8000/api/auth/me', {
+    const res = await axios.get(`${API_URL}/api/auth/me`, {
       withCredentials: true
     });
 
@@ -53,5 +55,5 @@ export const getCurrentUser = async () => {
 };
 
 export const logoutUser = async () => {
-  await axios.post('http://localhost:8000/api/auth/logout', {}, { withCredentials: true });
+  await axios.post(`${API_URL}/api/auth/logout`, {}, { withCredentials: true });
 };

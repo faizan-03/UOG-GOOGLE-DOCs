@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { API_URL } from "../../store/authstore"; // Adjust the import path as necessary
 
 const UploadDocument = () => {
   const [file, setFile] = useState(null);
@@ -15,7 +16,7 @@ const UploadDocument = () => {
 
     try {
       await axios.post(
-        `http://localhost:8000/api/admin/upload?type=${docType}`,
+        `${API_URL}/api/admin/upload?type=${docType}`,
         formData,
         { withCredentials: true }
       );

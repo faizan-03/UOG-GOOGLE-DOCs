@@ -6,6 +6,7 @@ import UsersTable from './UsersTable';
 import { logoutUser } from "../../store/authstore"; // Adjust path if needed
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { API_URL } from "../../store/authstore"; // Adjust the import path as necessary
 
 const AdminContainer = () => {
   const [totalUsers, setTotalUsers] = useState(0);
@@ -27,7 +28,7 @@ const handleLogout = async () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/api/admin/users', {
+        const res = await axios.get(`${API_URL}/api/admin/users`, {
           withCredentials: true,
         });
         setTotalUsers(res.data.count);

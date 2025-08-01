@@ -1,10 +1,11 @@
 import { toast } from "react-hot-toast";
+import {API_URL} from "../../store/authstore"; // Adjust the import path as necessary
 
 const DownloadStep = ({ docType, rollNo, downloadUrl, filename, reset }) => {
   const handleDownload = async () => {
     try {
       // Ensure the download URL is absolute
-      const backendUrl = downloadUrl.startsWith('http') ? downloadUrl : `http://localhost:8000${downloadUrl}`;
+      const backendUrl = downloadUrl.startsWith('http') ? downloadUrl : `${API_URL}${downloadUrl}`;
       const res = await fetch(backendUrl, {
         method: 'GET',
         credentials: 'include',
@@ -26,7 +27,7 @@ const DownloadStep = ({ docType, rollNo, downloadUrl, filename, reset }) => {
       link.remove();
 
       setTimeout(async () => {
-        await fetch(`http://localhost:8000/api/files/delete/${filename}`, {
+        await fetch(`${API_URL}/api/files/delete/${filename}`, {
           method: 'DELETE',
           credentials: 'include',
         });

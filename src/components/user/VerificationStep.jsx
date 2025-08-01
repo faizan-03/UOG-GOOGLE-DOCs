@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+import {API_URL} from '../../store/authstore'; // Adjust the import path as necessary
 
 const VerificationStep = ({ docType, rollNo, back, email, next, codeSent, setCodeSent }) => {
   const [code, setCode] = useState('');
@@ -23,7 +24,7 @@ const VerificationStep = ({ docType, rollNo, back, email, next, codeSent, setCod
 
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8000/api/verify/send-code', { email, rollNo }, { withCredentials: true });
+      const res = await axios.post(`${API_URL}/api/verify/send-code`, { email, rollNo }, { withCredentials: true });
       toast.success(res.data.message);
       setCodeSent(true);
     } catch (err) {
@@ -43,7 +44,7 @@ const VerificationStep = ({ docType, rollNo, back, email, next, codeSent, setCod
     setError('');
     setVerifying(true);
     try {
-      const res = await axios.post('http://localhost:8000/api/verify/verify-code', {
+      const res = await axios.post(`${API_URL}/api/verify/verify-code`, {
         email,
         code,
         docType,
