@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-export const API_URL = 'https://uogdocaccess.duckdns.org';
+export const API_URL = 'https://looudounautorepair.store';
 
 export const registerUser = async ({ email, password, username }) => {
   try {
