@@ -47,4 +47,3 @@ The app will be available at [https://uogdocs.vercel.app/]
   - `assets/` — Images and static assets
 - `public/` — Static files
 - `vite.config.js` — Vite configuration
-

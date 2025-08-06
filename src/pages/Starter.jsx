@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUser, getCurrentUser } from "../store/authstore"; // Adjust the path if needed
+import { loginUser, getCurrentUser } from "../store/authstore"; 
 import { toast } from "react-hot-toast";
 
 const Starter = ({ setAuthUser }) => {
