@@ -35,7 +35,7 @@ npm run dev
 # or
 yarn dev
 ```
-The app will be available at [http://localhost:5173](http://localhost:5173).
+The app will be available at [https://uogdocs.vercel.app/]
 
 ## Project Structure
 
