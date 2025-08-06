@@ -2,7 +2,7 @@ import React from 'react';
 
 const MovingBanner = () => {
   return (
-    <div className="fixed top-0 left-0 w-full z-[9999] bg-gradient-to-r from-[#7f53ac] via-[#647dee] to-[#7f53ac] shadow-md overflow-hidden backdrop-blur-sm">
+    <div className="fixed top-0 left-0 w-full z-40 bg-gradient-to-r from-[#7f53ac] via-[#647dee] to-[#7f53ac] shadow-md overflow-hidden backdrop-blur-sm">
       <div className="relative h-10 flex items-center">
         {/* Moving text container */}
         <div className="animate-marquee whitespace-nowrap flex items-center">
