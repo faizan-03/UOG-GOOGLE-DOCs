@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../store/authstore'; // Update path if needed
 import { toast } from "react-hot-toast";
+import MovingBanner from '../components/MovingBanner';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -31,7 +32,9 @@ const Register = () => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#a8edea] to-[#fed6e3]">
+    <>
+      <MovingBanner />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#a8edea] to-[#fed6e3] pt-10">
       <form
         onSubmit={handleRegister}
         className="bg-gradient-to-br from-white via-white to-[#e0c3fc] p-10 rounded-2xl shadow-lg w-full max-w-md flex flex-col gap-8 border border-[#e0c3fc]"
@@ -149,6 +152,7 @@ const Register = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 

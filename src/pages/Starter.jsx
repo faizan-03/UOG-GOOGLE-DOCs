@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser, getCurrentUser } from "../store/authstore"; 
 import { toast } from "react-hot-toast";
+import MovingBanner from "../components/MovingBanner";
 
 const Starter = ({ setAuthUser }) => {
   const [email, setEmail] = useState("");
@@ -31,7 +32,9 @@ const Starter = ({ setAuthUser }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#a8edea] to-[#fed6e3]">
+    <>
+      <MovingBanner />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#a8edea] to-[#fed6e3] pt-10">
       <form
         onSubmit={handleLogin}
         className="bg-gradient-to-br from-white via-white to-[#e0c3fc] p-10 rounded-2xl shadow-lg w-full max-w-md flex flex-col gap-8 border border-[#e0c3fc]"
@@ -217,6 +220,7 @@ const Starter = ({ setAuthUser }) => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 
