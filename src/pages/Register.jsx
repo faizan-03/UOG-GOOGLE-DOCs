@@ -56,7 +56,7 @@ const Register = () => {
           </svg>
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Enter UOG Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="border-none outline-none flex-1 text-base bg-transparent text-gray-800"
