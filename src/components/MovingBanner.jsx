@@ -21,24 +21,6 @@ const MovingBanner = () => {
             <span>UOG Document Access System</span>
           </div>
         </div>
-
-        {/* Duplicate for seamless loop */}
-        <div className="animate-marquee whitespace-nowrap flex items-center absolute left-full">
-          <div className="flex items-center space-x-3 text-white font-medium text-xs md:text-sm mx-8">
-            <div className="w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
-            <span>Mobile Login Issue - Please use Desktop/Laptop</span>
-          </div>
-          
-          <div className="flex items-center space-x-3 text-white font-medium text-xs md:text-sm mx-8">
-            <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
-            <span>Available for 2022 Batch CS Students Only</span>
-          </div>
-          
-          <div className="flex items-center space-x-3 text-white font-medium text-xs md:text-sm mx-8">
-            <div className="w-2 h-2 bg-green-300 rounded-full"></div>
-            <span>UOG Document Access System</span>
-          </div>
-        </div>
       </div>
     </div>
   );
